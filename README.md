@@ -81,8 +81,8 @@ train.py test.py
 10epoch，batchsize=64
 
 MLP速度最快，提升数据量能有效提升分类结果；CNN速度最慢，在数据量较小时效果较好，但提升数据量效果提升不大；
-| Model | Loss | data | Accuracy |
-| :---: | :---: | :---: | :---: |
-| CNN | CrossEntropy | 76332| 85.16% |
-| LSTM | CrossEntropy | 76332 | 85.16% |
-| MLP | MSE | 0.6164 | 76332 | r2-score 0.33 |
+| Model | Loss | data | Accuracy | r2-score|
+| :---: | :---: | :---: | :---: | :---: |
+| CNN | CrossEntropy | 76332| 85.16% |    |
+| LSTM | CrossEntropy | 76332 | 85.16% |    |
+| MLP | MSE | 76332 |  |0.33|
