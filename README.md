@@ -80,4 +80,10 @@ Dataloader.py加载编码好的向量
 CNN.py , MLP.py, LSTM.py
 
 ### 数据增强--数据扰动
-产生perturbated_prompts
+产生perturbated_prompts，见prompt-classification.py
+## 模型训练及测试
+train.py test.py
+## 结果
+10epoch，batchsize=64
+
+MLP速度最快，提升数据量能有效提升分类结果；CNN速度最慢，在数据量较小时效果较好，但提升数据量效果提升不大；
