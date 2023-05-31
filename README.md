@@ -42,22 +42,16 @@ If image_uid!=best_image_uid:label=0;
 
 问题：图片rank数据中含有重复数据，导致数据预处理过程中，产生img-prompt对多个label的情况
 
-数据筛选：
+### 数据筛选：
 
 （1）去除重复行df.drop_duplicates()；82709条
 （2）将数据按照label降序排列；df.sort_values(axis=0, by='label', ascending=False)
 （3）去除重复行，保留第一次出现的行，即label值较大的行; 
 df=df.drop_duplicates(subset=['image_uid','prompt'],keep='first') 76332条
 
-计数：
+计数：df['label'].value_counts()
 
-df['label'].value_counts()
-
-0    37271
-
-1    27734
-
-2    11327
+0    37271；1    27734；2    11327
 
 共计76332条。随机划分训练集、测试集8：2。
 
@@ -87,3 +81,4 @@ train.py test.py
 10epoch，batchsize=64
 
 MLP速度最快，提升数据量能有效提升分类结果；CNN速度最慢，在数据量较小时效果较好，但提升数据量效果提升不大；
+
